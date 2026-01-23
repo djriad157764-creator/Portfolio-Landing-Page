@@ -95,8 +95,8 @@ body {
   font-weight: 600;
   letter-spacing: 1px;
   z-index: 1;
-   opacity: 0;
-  animation:slideTop 1s ease forwards;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
   animation-delay: 1.8s;
 }
 .btn::before {
@@ -149,18 +149,18 @@ body {
   color: #fff;
   z-index: 1;
 }
-.home-sci a:nth-child(1){
-    opacity: 0;
+.home-sci a:nth-child(1) {
+  opacity: 0;
   animation: slidebottom 1s ease forwards;
   animation-delay: 2.1s;
 }
-.home-sci a:nth-child(3){
-    opacity: 0;
+.home-sci a:nth-child(3) {
+  opacity: 0;
   animation: slideTop 1s ease forwards;
   animation-delay: 2.1s;
 }
-.home-sci a:nth-child(2){
-    opacity: 0;
+.home-sci a:nth-child(2) {
+  opacity: 0;
   animation: slideRight 1s ease forwards;
   animation-delay: 2.1s;
 }
@@ -199,7 +199,9 @@ body {
   width: 410px;
   height: 410px;
   opacity: 0;
-  animation: zoomIn 1s ease forwards,floatingImage 4s ease-in-out infinite;
+  animation:
+    zoomIn 1s ease forwards,
+    floatingImage 4s ease-in-out infinite;
   animation-delay: 2.1s, 3.1s;
 }
 
@@ -226,7 +228,7 @@ body {
   height: 100%;
   background: linear-gradient(#f06, #3cf);
   border-radius: 50%;
-  animation:circleRotate 5s linear infinite ;
+  animation: circleRotate 5s linear infinite;
 }
 .glowing-circle span:nth-child(1) {
   filter: blur(10px);
@@ -298,7 +300,7 @@ body {
   }
   100% {
     opacity: 1;
-    transform:scale(1);
+    transform: scale(1);
   }
 }
 @keyframes floatingImage {
@@ -318,5 +320,95 @@ body {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Media Queries */
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 20px 5%;
+  }
+
+  .home {
+    padding: 100px 5% 50px;
+    flex-direction: column;
+    height: auto;
+    gap: 50px;
+  }
+
+  .home-content {
+    max-width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 40px;
+  }
+
+  .home-sci {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .home-sci a {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    flex-direction: column;
+    padding: 15px 2%;
+    background: #0c1022;
+  }
+
+  .navbar {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    margin: 5px 10px;
+    display: block;
+  }
+
+  .home-content h1 {
+    font-size: 32px;
+  }
+
+  .home-content h3 {
+    font-size: 20px;
+  }
+
+  .home-content p {
+    font-size: 14px;
+    margin: 15px 0 30px;
+  }
+
+  .home-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .home-image .glowing-circle::after {
+    width: 270px;
+    height: 270px;
+  }
+
+  .glowing-circle .image {
+    width: 270px;
+    height: 270px;
+  }
+
+  .image img {
+    max-width: 250px;
+    top: -60px;
   }
 }
