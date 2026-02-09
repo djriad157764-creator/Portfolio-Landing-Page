@@ -236,8 +236,8 @@ body {
 .image img {
   position: absolute;
   left: 50%;
-  top: -100px;
-  transform: translateX(-60%) rotate(-24deg);
+  top: 50%;
+  transform: translate(-50%, 25%) rotate(-2deg);
   max-width: 370px;
   object-fit: cover;
 }
