@@ -237,7 +237,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 25%) rotate(-2deg);
+  transform: translate(-51%, -45%);
   max-width: 370px;
   object-fit: cover;
 }
